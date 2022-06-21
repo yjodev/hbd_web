@@ -8,9 +8,10 @@ export const SignupPage = () => {
 	const [password, setPassword] = useState("");
 	const { replace } = useHistory();
 
+
 	const register = () => {
 		axios
-			.post('http://localhost:1337/api/auth/local/register', {
+			.post('https://startup-coding-hbd.herokuapp.com/api/users/auth/local/register', {
 				username: name,
 				email: email,
 				password: password,
@@ -64,9 +65,11 @@ export const SignupPage = () => {
 					}}>Create your account</button>
 
 			</div>
+			<div></div>
 		</div>
 
 
 
 	</div>;
+
 };
